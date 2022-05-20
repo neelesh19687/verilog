@@ -1,0 +1,22 @@
+E:/Verilog/andgate.v {1 {vlog -work work -vopt -stats=none E:/Verilog/andgate.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module andgate
+
+Top level modules:
+	andgate
+
+} {} {}} E:/Verilog/orgate.v {1 {vlog -work work -vopt -stats=none E:/Verilog/orgate.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module orgate
+
+Top level modules:
+	orgate
+
+} {} {}} E:/Verilog/xorgate.v {1 {vlog -work work -vopt -stats=none E:/Verilog/xorgate.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module xorgate
+
+Top level modules:
+	xorgate
+
+} {} {}}

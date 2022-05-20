@@ -1,0 +1,102 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-965-g55e06db6)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000000000fd7d80 .scope module, "decodertb" "decodertb" 2 4;
+ .timescale -9 -9;
+v0000000000fe3890_0 .var "e", 0 0;
+v0000000000fe39d0_0 .var "h0", 0 0;
+v0000000000fe36b0_0 .var "h1", 0 0;
+v0000000000fe3750_0 .net "u0", 0 0, L_000000000102f890;  1 drivers
+v0000000000fe3a70_0 .net "u1", 0 0, L_000000000102fcf0;  1 drivers
+v0000000000fe3bb0_0 .net "u2", 0 0, L_000000000102fc80;  1 drivers
+v0000000000fe3ed0_0 .net "u3", 0 0, L_000000000102ff20;  1 drivers
+S_00000000010bc5d0 .scope module, "uut" "decoder" 2 10, 3 1 0, S_0000000000fd7d80;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "e";
+    .port_info 1 /INPUT 1 "h0";
+    .port_info 2 /INPUT 1 "h1";
+    .port_info 3 /OUTPUT 1 "u0";
+    .port_info 4 /OUTPUT 1 "u1";
+    .port_info 5 /OUTPUT 1 "u2";
+    .port_info 6 /OUTPUT 1 "u3";
+L_0000000000fd7fb0 .functor NOT 1, v0000000000fe39d0_0, C4<0>, C4<0>, C4<0>;
+L_00000000010b6df0 .functor AND 1, v0000000000fe3890_0, L_0000000000fd7fb0, C4<1>, C4<1>;
+L_000000000102fd60 .functor NOT 1, v0000000000fe36b0_0, C4<0>, C4<0>, C4<0>;
+L_000000000102f890 .functor AND 1, L_00000000010b6df0, L_000000000102fd60, C4<1>, C4<1>;
+L_000000000102fac0 .functor NOT 1, v0000000000fe39d0_0, C4<0>, C4<0>, C4<0>;
+L_000000000102fe40 .functor AND 1, v0000000000fe3890_0, L_000000000102fac0, C4<1>, C4<1>;
+L_000000000102fcf0 .functor AND 1, L_000000000102fe40, v0000000000fe36b0_0, C4<1>, C4<1>;
+L_000000000102fba0 .functor AND 1, v0000000000fe3890_0, v0000000000fe39d0_0, C4<1>, C4<1>;
+L_000000000102feb0 .functor NOT 1, v0000000000fe36b0_0, C4<0>, C4<0>, C4<0>;
+L_000000000102fc80 .functor AND 1, L_000000000102fba0, L_000000000102feb0, C4<1>, C4<1>;
+L_000000000102fdd0 .functor AND 1, v0000000000fe3890_0, v0000000000fe39d0_0, C4<1>, C4<1>;
+L_000000000102ff20 .functor AND 1, L_000000000102fdd0, v0000000000fe36b0_0, C4<1>, C4<1>;
+v0000000000fd7f10_0 .net *"_ivl_0", 0 0, L_0000000000fd7fb0;  1 drivers
+v0000000000fe4290_0 .net *"_ivl_10", 0 0, L_000000000102fe40;  1 drivers
+v0000000000fe3d90_0 .net *"_ivl_14", 0 0, L_000000000102fba0;  1 drivers
+v0000000000fe41f0_0 .net *"_ivl_16", 0 0, L_000000000102feb0;  1 drivers
+v0000000000fe3b10_0 .net *"_ivl_2", 0 0, L_00000000010b6df0;  1 drivers
+v0000000000fe3570_0 .net *"_ivl_20", 0 0, L_000000000102fdd0;  1 drivers
+v0000000000fe3cf0_0 .net *"_ivl_4", 0 0, L_000000000102fd60;  1 drivers
+v0000000000fe3930_0 .net *"_ivl_8", 0 0, L_000000000102fac0;  1 drivers
+v0000000000fe37f0_0 .net "e", 0 0, v0000000000fe3890_0;  1 drivers
+v0000000000fe3390_0 .net "h0", 0 0, v0000000000fe39d0_0;  1 drivers
+v0000000000fe34d0_0 .net "h1", 0 0, v0000000000fe36b0_0;  1 drivers
+v0000000000fe3430_0 .net "u0", 0 0, L_000000000102f890;  alias, 1 drivers
+v0000000000fe3e30_0 .net "u1", 0 0, L_000000000102fcf0;  alias, 1 drivers
+v0000000000fe3610_0 .net "u2", 0 0, L_000000000102fc80;  alias, 1 drivers
+v0000000000fe40b0_0 .net "u3", 0 0, L_000000000102ff20;  alias, 1 drivers
+    .scope S_0000000000fd7d80;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "decodertb.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000000000fd7d80 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000fe3890_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000fe39d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000fe36b0_0, 0, 1;
+    %delay 30, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000fe3890_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000fe39d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000fe36b0_0, 0, 1;
+    %delay 30, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000fe3890_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000fe39d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000fe36b0_0, 0, 1;
+    %delay 30, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000fe3890_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000fe39d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000fe36b0_0, 0, 1;
+    %delay 30, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000fe3890_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000fe39d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000fe36b0_0, 0, 1;
+    %delay 30, 0;
+    %vpi_call 2 27 "$display", "Compiled Successfully" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "decodertb.v";
+    "./decoder.v";

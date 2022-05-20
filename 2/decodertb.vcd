@@ -1,0 +1,57 @@
+$date
+	Sat May 07 11:27:11 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module decodertb $end
+$var wire 1 ! u3 $end
+$var wire 1 " u2 $end
+$var wire 1 # u1 $end
+$var wire 1 $ u0 $end
+$var reg 1 % e $end
+$var reg 1 & h0 $end
+$var reg 1 ' h1 $end
+$scope module uut $end
+$var wire 1 % e $end
+$var wire 1 & h0 $end
+$var wire 1 ' h1 $end
+$var wire 1 $ u0 $end
+$var wire 1 # u1 $end
+$var wire 1 " u2 $end
+$var wire 1 ! u3 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1'
+1&
+0%
+0$
+0#
+0"
+0!
+$end
+#30
+1$
+0'
+0&
+1%
+#60
+0$
+1"
+1&
+#90
+1#
+0"
+1'
+0&
+#120
+0#
+1!
+1&
+#150
