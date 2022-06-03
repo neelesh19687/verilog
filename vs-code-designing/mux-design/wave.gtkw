@@ -1,0 +1,33 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Fri Jun 03 06:56:08 2022
+[*]
+[dumpfile] "E:\Verilog\vs-code-designing\mux-design\mux41.vcd"
+[dumpfile_mtime] "Fri Jun 03 06:54:15 2022"
+[dumpfile_size] 893
+[savefile] "E:\Verilog\vs-code-designing\mux-design\wave.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] 5 -73
+*-2.949833 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[sst_width] 197
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 153
+@28
+testbench.DUT.i0
+testbench.DUT.i1
+testbench.DUT.i2
+testbench.DUT.i3
+testbench.DUT.s0
+testbench.DUT.s1
+testbench.DUT.t1
+testbench.DUT.t2
+testbench.DUT.t3
+testbench.DUT.t4
+testbench.DUT.t5
+testbench.DUT.t6
+testbench.DUT.y
+[pattern_trace] 1
+[pattern_trace] 0
