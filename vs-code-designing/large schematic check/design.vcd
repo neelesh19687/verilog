@@ -1,5 +1,5 @@
 $date
-	Sun May 29 19:06:38 2022
+	Fri Jun 03 11:42:52 2022
 $end
 $version
 	Icarus Verilog
@@ -13,19 +13,33 @@ $var reg 1 " A $end
 $var reg 1 # B $end
 $var reg 1 $ C $end
 $var reg 1 % D $end
+$var reg 1 & E $end
+$var reg 1 ' F $end
 $scope module DUT $end
 $var wire 1 " A $end
 $var wire 1 # B $end
 $var wire 1 $ C $end
 $var wire 1 % D $end
+$var wire 1 & E $end
+$var wire 1 ' F $end
+$var wire 1 ( T1 $end
+$var wire 1 ) T2 $end
+$var wire 1 * T3 $end
+$var wire 1 + T4 $end
+$var wire 1 , T5 $end
+$var wire 1 - T6 $end
 $var wire 1 ! Y $end
-$var wire 1 & t1 $end
-$var wire 1 ' t2 $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+x-
+x,
+x+
+x*
+x)
+x(
 x'
 x&
 x%
@@ -35,20 +49,39 @@ x"
 x!
 $end
 #5
-1%
+0'
+0&
+0%
 0$
 0#
-1"
-#6
-0'
-1&
-#7
-1!
-#10
-1#
 0"
-#15
-1$
-#16
+#6
+1*
+0)
+0(
+#7
+0,
+0+
+#8
+1-
+#9
+0!
+#10
 1'
+1#
+1"
+#11
+1(
+#12
+1+
+#13
+0-
+#14
+1!
+#15
+1&
+#16
+0*
+#17
+1,
 #20

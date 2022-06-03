@@ -1,0 +1,3 @@
+iverilog -o mysim mydesign.v mydesign-test.v 
+vvp mysim
+gtkwave mydesign.vcd
