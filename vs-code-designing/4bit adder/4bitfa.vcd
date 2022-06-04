@@ -1,0 +1,50 @@
+$date
+	Sat Jun 04 16:53:58 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 4 ! SUM [3:0] $end
+$var wire 1 " C_OUT $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$var reg 1 % C_IN $end
+$scope module DUT $end
+$var wire 4 & A [3:0] $end
+$var wire 4 ' B [3:0] $end
+$var wire 1 % C_IN $end
+$var wire 4 ( SUM [3:0] $end
+$var wire 1 " C_OUT $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 (
+b1 '
+b0 &
+0%
+b1 $
+b0 #
+0"
+b1 !
+$end
+#100
+b110 !
+b110 (
+b11 $
+b11 '
+b11 #
+b11 &
+#200
+b0 !
+b0 (
+1"
+b1 $
+b1 '
+b1111 #
+b1111 &

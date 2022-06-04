@@ -1,0 +1,79 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-965-g55e06db6)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000000001015820 .scope module, "testbench" "testbench" 2 1;
+ .timescale 0 0;
+v0000000001011c10_0 .var "A", 3 0;
+v00000000010117b0_0 .var "B", 3 0;
+v0000000001011850_0 .var "C_IN", 0 0;
+v0000000001011210_0 .net "C_OUT", 0 0, L_00000000010118f0;  1 drivers
+v0000000001011ad0_0 .net "SUM", 3 0, L_0000000001011350;  1 drivers
+S_00000000010159b0 .scope module, "DUT" "fbitfa" 2 8, 3 1 0, S_0000000001015820;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "A";
+    .port_info 1 /INPUT 4 "B";
+    .port_info 2 /INPUT 1 "C_IN";
+    .port_info 3 /OUTPUT 1 "C_OUT";
+    .port_info 4 /OUTPUT 4 "SUM";
+v00000000011190d0_0 .net "A", 3 0, v0000000001011c10_0;  1 drivers
+v0000000001007a40_0 .net "B", 3 0, v00000000010117b0_0;  1 drivers
+v000000000111bbc0_0 .net "C_IN", 0 0, v0000000001011850_0;  1 drivers
+v000000000111bc60_0 .net "C_OUT", 0 0, L_00000000010118f0;  alias, 1 drivers
+v0000000001015b40_0 .net "SUM", 3 0, L_0000000001011350;  alias, 1 drivers
+L_000000000105f890 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000000001015be0_0 .net *"_ivl_10", 0 0, L_000000000105f890;  1 drivers
+v0000000001116710_0 .net *"_ivl_11", 4 0, L_0000000001011a30;  1 drivers
+v00000000011167b0_0 .net *"_ivl_13", 4 0, L_0000000001011df0;  1 drivers
+L_000000000105f8d8 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v0000000001116850_0 .net *"_ivl_16", 3 0, L_000000000105f8d8;  1 drivers
+v00000000011168f0_0 .net *"_ivl_17", 4 0, L_0000000001011170;  1 drivers
+v0000000001116990_0 .net *"_ivl_3", 4 0, L_0000000001011990;  1 drivers
+L_000000000105f848 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000000010112b0_0 .net *"_ivl_6", 0 0, L_000000000105f848;  1 drivers
+v0000000001011710_0 .net *"_ivl_7", 4 0, L_0000000001011d50;  1 drivers
+L_00000000010118f0 .part L_0000000001011170, 4, 1;
+L_0000000001011350 .part L_0000000001011170, 0, 4;
+L_0000000001011990 .concat [ 4 1 0 0], v0000000001011c10_0, L_000000000105f848;
+L_0000000001011d50 .concat [ 4 1 0 0], v00000000010117b0_0, L_000000000105f890;
+L_0000000001011a30 .arith/sum 5, L_0000000001011990, L_0000000001011d50;
+L_0000000001011df0 .concat [ 1 4 0 0], v0000000001011850_0, L_000000000105f8d8;
+L_0000000001011170 .arith/sum 5, L_0000000001011a30, L_0000000001011df0;
+    .scope S_0000000001015820;
+T_0 ;
+    %vpi_call 2 12 "$monitor", $time, " A=%b, B=%b, C_IN=%b, C_OUT=%b, SUM=%b", v0000000001011c10_0, v00000000010117b0_0, v0000000001011850_0, v0000000001011210_0, v0000000001011ad0_0 {0 0 0};
+    %vpi_call 2 13 "$dumpfile", "fbitfa.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000000001015820 {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0000000001011c10_0, 0, 4;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v00000000010117b0_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000001011850_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0000000001011c10_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v00000000010117b0_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000001011850_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0000000001011c10_0, 0, 4;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v00000000010117b0_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000001011850_0, 0, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "fbitfa-test.v";
+    "fbitfa.v";
