@@ -1,0 +1,86 @@
+$date
+	Tue Jun 07 17:10:56 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 8 ! count [7:0] $end
+$var reg 1 " clk $end
+$var reg 1 # rst $end
+$var reg 1 $ u_d $end
+$scope module DUT $end
+$var wire 1 " clk $end
+$var wire 8 % count [7:0] $end
+$var wire 1 # rst $end
+$var wire 1 $ u_d $end
+$var reg 8 & count_temp [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 &
+b0 %
+1$
+1#
+0"
+b0 !
+$end
+#10
+b1 !
+b1 %
+b1 &
+1"
+#20
+0"
+#30
+b10 !
+b10 %
+b10 &
+1"
+#40
+0"
+#50
+b11 !
+b11 %
+b11 &
+1"
+#60
+0"
+#70
+b100 !
+b100 %
+b100 &
+1"
+#80
+0"
+#90
+b101 !
+b101 %
+b101 &
+1"
+#100
+0"
+#110
+b110 !
+b110 %
+b110 &
+1"
+#120
+0"
+0#
+#130
+b0 !
+b0 %
+b0 &
+1"
+#140
+0"
+#150
+1"
+#160
+0"
