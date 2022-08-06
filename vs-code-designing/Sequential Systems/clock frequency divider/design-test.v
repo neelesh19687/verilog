@@ -13,9 +13,10 @@ module testbench (
     initial begin
         $dumpfile("clkd.vcd");
         $dumpvars(0,testbench);
-        rst=0;
+        
+        reset=0; d=1;
         #480;
-        rst=1;
+        reset=1;
         #60;
         $finish;
     end

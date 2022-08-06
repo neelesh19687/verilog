@@ -5,9 +5,9 @@ module fxomuxb (
     input [1:0]s;
     output Y;
 
-    // reg Y ;
-    // wire [1:0] s;
-    // wire [3:0] i;
+    reg Y ;
+     wire [1:0] s;
+     wire [3:0] i;
 
     always @(i or s) begin
         case(s)
@@ -18,3 +18,4 @@ module fxomuxb (
         endcase
     end
 endmodule
+ 
